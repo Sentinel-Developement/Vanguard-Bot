@@ -1,7 +1,7 @@
-# Security Policy for [Exact Name of Your Bot]
+# Security Policy for Vanguard Bot
 
 **Maintainer:** `assassin78476`  
-**Repository:** [GitHub](https://github.com/Sentinel-Developement/vanguard-bot-2)  
+**Repository:** [GitHub](https://github.com/Sentinel-Developement/Vanguard-Bot)  
 
 This document outlines the security policies for **[Vanguard Bott]**.  
 As this project is under a **restrictive proprietary license**, all security matters are handled exclusively by the project maintainer.
