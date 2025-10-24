@@ -1,0 +1,1 @@
+module.exports = { name: 'phgif', description: 'phgif', async execute(m) { if (!m.channel.nsfw) return m.reply('🔞'); try { const r = await new (require('nsfwhub').NSFW)().fetch('phgif'); m.reply({ embeds: [new (require('discord.js').EmbedBuilder)().setTitle('PH GIF').setImage(r.image?.url || r.url).setColor('#ff69b4')] }); } catch (e) { console.error(e); m.reply('❌'); } } };

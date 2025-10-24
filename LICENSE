@@ -1,0 +1,84 @@
+Copyright (c) [2025] Sentinel Developement
+All rights reserved.
+
+SOFTWARE NAME: Vanguard Bot
+VERSION: 1.4.1.0
+OWNER:assassin78476
+
+────────────────────────────────────────────
+1. DEFINITIONS
+────────────────────────────────────────────
+“Software” refers to the Discord bot, including all source code, compiled code, configuration files, modules, commands, assets, database schemas, documentation, and any related data owned by the Licensor.
+
+“Licensor” refers to the owner and copyright holder of the Software.
+
+“User” refers to any individual or entity authorized to host or operate the Software.
+
+────────────────────────────────────────────
+2. LICENSE GRANT
+────────────────────────────────────────────
+The Licensor grants the User a **limited, non-exclusive, non-transferable, revocable license** to host and operate the Software for authorized purposes, under the following strict conditions:
+
+- The User is permitted to **host the bot** on a private or public server, provided that no part of the Software is modified, redistributed, or published.
+- The Software must be hosted **as provided**, without any alteration to its source code, features, branding, or commands.
+- The User may not distribute or make the Software’s source code or compiled files publicly accessible.
+- The User may not create copies, forks, or derivative works based on the Software.
+- The User must not claim ownership, authorship, or partnership over the Software.
+-The User may modify the code but removing credits is not Allowed
+
+────────────────────────────────────────────
+3. RESTRICTIONS
+────────────────────────────────────────────
+Unless explicitly authorized in writing by the Licensor, the following actions are **strictly forbidden**:
+
+1. **Redistribution:** Sharing, selling, transferring, or uploading any copy of the Software to any platform (GitHub, GitLab, Replit, etc.).
+2. **Reverse Engineering:** Decompiling, decrypting, disassembling, or attempting to extract the Software’s source code or logic.
+3. **Rebranding:** Changing the bot’s name, avatar, descriptions, embeds, or removing credit to the Licensor.
+4. **Commercialization:** Using the Software for profit, including through hosting services, paid access, or selling “premium” features.
+5. **Integration:** Embedding or connecting the Software to another project or bot without explicit written permission.
+6. **Code Access:** Providing access to the Software’s internal files, code, or configuration to third parties.
+
+────────────────────────────────────────────
+4. PERMITTED USE
+────────────────────────────────────────────
+- The User may **host and operate** the bot solely in its unmodified form.
+- The User may configure tokens, intents, and environment variables necessary for operation.
+- The User may manage bot hosting (e.g., on Pterodactyl, VPS, or Replit) **only for private or authorized usage**.
+- The User must maintain all original credits and disclaimers intact.
+
+────────────────────────────────────────────
+5. INTELLECTUAL PROPERTY
+────────────────────────────────────────────
+All rights, title, and interest in the Software remain with the Licensor.  
+The Software is **not open-source**, and no rights of  distribution are granted beyond those explicitly stated.
+
+Any unauthorized use, or redistribution constitutes a **copyright violation** and may result in legal action.
+
+────────────────────────────────────────────
+6. TERMINATION
+────────────────────────────────────────────
+This license is automatically revoked if the User:
+- Rredistributes, or discloses the Software;  
+- Violates any of the restrictions stated herein; or  
+- Uses the Software in a commercial or unauthorized context.  
+
+Upon termination, the User must immediately stop using the Software, delete all copies, and provide proof of deletion upon request.
+
+────────────────────────────────────────────
+7. WARRANTY DISCLAIMER
+────────────────────────────────────────────
+THE SOFTWARE IS PROVIDED “AS IS” WITHOUT ANY WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.  
+THE LICENSOR SHALL NOT BE LIABLE FOR ANY DAMAGE, DATA LOSS, OR DISCORD ACCOUNT RESTRICTION CAUSED BY THE USE OF THE SOFTWARE.
+
+────────────────────────────────────────────
+8. GOVERNING LAW
+────────────────────────────────────────────
+This License shall be governed by and construed according to the laws of [Ton pays],  
+and any dispute shall fall under the exclusive jurisdiction of the courts of [Ta ville ou région].
+
+────────────────────────────────────────────
+9. CONTACT
+────────────────────────────────────────────
+For permissions, licensing inquiries, or partnership requests, contact:  
+assassin.ba@gmail.com
+────────────────────────────────────────────

@@ -1,0 +1,23 @@
+{
+    "token": "",
+    "language": "en",
+    "prefix": "!",
+    "mongodbUri": "",
+    "excessCommands": {
+        "other": true,
+        "hentai": true,
+        "economy" : true
+    },
+    "categories": {
+        "media": true,
+        "basic": true,
+        "utility": true,
+        "moderation": true,
+        "core" :true,
+        "lavalink": true,
+        "fun": true,
+        "distube": true,
+        "setups": true,
+        "audio": true
+    }
+}
