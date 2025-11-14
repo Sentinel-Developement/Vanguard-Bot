@@ -1,14 +1,3 @@
-![License](https://img.shields.io/badge/license-DBPL--RHE-red?style=for-the-badge&logo=shield)
-![Type](https://img.shields.io/badge/type-Proprietary%20Bot-black?style=for-the-badge&logo=discord)
-![Status](https://img.shields.io/badge/Protected%20by%20Owner-✔️-brightgreen?style=for-the-badge)
-![Redistribution](https://img.shields.io/badge/redistribution-prohibited-red?style=for-the-badge)
-![Hosting](https://img.shields.io/badge/hosting-authorized-blue?style=for-the-badge)
-
-> 🛡️ **This Discord bot is protected under a Proprietary License.**  
-> Unauthorized redistribution, or reverse engineering is strictly forbidden.  
-> Hosting is only permitted with explicit authorization from the owner.  
->  
-> © 2025 [Sentinel Developement]. All rights reserved.
 
 
 
