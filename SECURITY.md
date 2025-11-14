@@ -3,8 +3,8 @@
 **Maintainer:** `assassin78476`  
 **Repository:** [GitHub](https://github.com/Sentinel-Developement/Vanguard-Bot)  
 
-This document outlines the security policies for **[Vanguard Bott]**.  
-As this project is under a **restrictive proprietary license**, all security matters are handled exclusively by the project maintainer.
+This document outlines the security policies for **[Vanguard Bot]**.  
+As this project is under the **AGPL 3.0 Licence**, all security matters are handled exclusively by the project maintainer.
 
 ---
 
