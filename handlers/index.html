@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlaceYT - All in One Bot</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: 'Press Start 2P', cursive;
+            background: #000;
+            color: #00ff00;
+            text-align: center;
+            position: relative;
+        }
+
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                transparent 50%,
+                rgba(0, 255, 0, 0.03) 50%
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+            animation: scanlines 0.5s linear infinite;
+        }
+
+        @keyframes scanlines {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(4px); }
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .logo-container {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+            animation: glitch 3s infinite;
+            position: relative;
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% {
+                transform: translate(0);
+            }
+            92% {
+                transform: translate(-2px, 2px);
+            }
+            94% {
+                transform: translate(2px, -2px);
+            }
+            96% {
+                transform: translate(-2px, -2px);
+            }
+            98% {
+                transform: translate(2px, 2px);
+            }
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: rgba(0, 255, 0, 0.1);
+            border: 2px solid #00ff00;
+            padding: 0.5rem 1rem;
+            font-size: clamp(0.6rem, 2vw, 0.9rem);
+            margin-bottom: 2rem;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+            }
+        }
+
+        .description {
+            font-family: 'Space Mono', monospace;
+            font-size: clamp(0.7rem, 2vw, 1rem);
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            font-family: 'Press Start 2P', cursive;
+            font-size: clamp(0.6rem, 1.5vw, 0.8rem);
+            padding: 1.2rem 2rem;
+            border: 3px solid #00ff00;
+            background: transparent;
+            color: #00ff00;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #00ff00;
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            left: 0;
+        }
+
+        .btn:hover {
+            color: #000;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: #00ff00;
+            color: #000;
+        }
+
+        .btn-primary::before {
+            background: #000;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: #00ff00;
+        }
+
+        .btn-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .hacking-theme {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hacking-theme div {
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, #00ff00, transparent);
+            opacity: 0;
+            animation: moveAndFade 5s linear infinite;
+        }
+
+        @keyframes moveAndFade {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+        }
+
+        .hacking-theme div:nth-child(1) { left: 5%; animation-delay: 0s; animation-duration: 4s; }
+        .hacking-theme div:nth-child(2) { left: 15%; animation-delay: 0.5s; animation-duration: 5s; }
+        .hacking-theme div:nth-child(3) { left: 25%; animation-delay: 1s; animation-duration: 6s; }
+        .hacking-theme div:nth-child(4) { left: 35%; animation-delay: 1.5s; animation-duration: 4.5s; }
+        .hacking-theme div:nth-child(5) { left: 45%; animation-delay: 2s; animation-duration: 5.5s; }
+        .hacking-theme div:nth-child(6) { left: 55%; animation-delay: 2.5s; animation-duration: 4.8s; }
+        .hacking-theme div:nth-child(7) { left: 65%; animation-delay: 3s; animation-duration: 5.2s; }
+        .hacking-theme div:nth-child(8) { left: 75%; animation-delay: 3.5s; animation-duration: 6.5s; }
+        .hacking-theme div:nth-child(9) { left: 85%; animation-delay: 4s; animation-duration: 5.8s; }
+        .hacking-theme div:nth-child(10) { left: 95%; animation-delay: 4.5s; animation-duration: 4.2s; }
+
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .terminal-cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2em;
+            background: #00ff00;
+            animation: blink 1s step-end infinite;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+        }
+
+        .feature-item {
+            padding: 1rem;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            background: rgba(0, 255, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            border-color: #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 1rem;
+            }
+
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="scanline"></div>
+    
+    <div class="hacking-theme">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="content">
+        <div class="logo-container">
+            <h1>GlaceYT<span class="terminal-cursor"></span></h1>
+            <div class="version-badge">v1.4.1.0 BETA</div>
+        </div>
+
+        <p class="description">
+            > Initializing All-in-One Discord Bot System...<br>
+            > Status: ONLINE<br>
+            > Features: LOADED<br>
+            > Ready for deployment.
+        </p>
+
+        <div class="features">
+            <div class="feature-item">[✓] Moderation</div>
+            <div class="feature-item">[✓] Music</div>
+            <div class="feature-item">[✓] Fun</div>
+            <div class="feature-item">[✓] Utility</div>
+        </div>
+
+        <div class="btn-container">
+            <a href="https://glaceyt.com/" class="btn btn-primary">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span>Main Website</span>
+            </a>
+            <a href="https://glaceyt.com/resources/dashboard" class="btn">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <span>Dashboard</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const descriptions = [
+            "> Initializing All-in-One Discord Bot System...<br>> Status: ONLINE<br>> Features: LOADED<br>> Ready for deployment.",
+            "> System check: OK<br>> Database: CONNECTED<br>> API: RESPONSIVE<br>> All systems operational.",
+            "> Bot Framework: v1.4.1.0<br>> Uptime: 99.9%<br>> Commands: 150+<br>> Performance: OPTIMAL"
+        ];
+        
+        let currentIndex = 0;
+        const descElement = document.querySelector('.description');
+        
+        setInterval(() => {
+            descElement.style.opacity = '0';
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % descriptions.length;
+                descElement.innerHTML = descriptions[currentIndex];
+                descElement.style.opacity = '0.9';
+            }, 500);
+        }, 8000);
+    </script>
+</body>
+</html>
