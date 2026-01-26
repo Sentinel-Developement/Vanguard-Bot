@@ -1,8 +1,8 @@
 {
-    "token": "MTM4MTMwMDIxNTE4MDQzMTQ4MQ.GcjsbH.cPHdY6j9CM5GIOzTK-huz-r0CD89zAIL04gszQ",
+    "token": "",
     "language": "en",
     "prefix": "!",
-    "mongodbUri": "mongodb+srv://assassin:assassin@vanguard-db.ogf6wuz.mongodb.net/?retryWrites=true&w=majority",
+    "mongodbUri": "",
     "excessCommands": {
         "other": true,
         "hentai": false,
